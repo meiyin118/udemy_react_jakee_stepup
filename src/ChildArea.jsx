@@ -16,9 +16,3 @@ export const ChildArea = memo((props) => {
   console.log("ChildAreaのレンダリング");
   return <>{open ? <p style={style}>{text}</p> : null}</>;
 });
-
-// export const ChildArea = (props) => {
-//   const { text, open } = props;
-//   console.log("ChildAreaのレンダリング");
-//   return <>{open ? <p style={style}>{text}</p> : null}</>;
-// };
