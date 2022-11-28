@@ -7,12 +7,19 @@ const style = {
   width: "300px",
   padding: "10px",
   backgroundColor: "#f7f7f7",
-  color: "#222"
+  color: "#222",
 };
 
 // コンポーネントはmemoで囲ってあげるようにする
 export const ChildArea = memo((props) => {
-  const { text, open } = props;
+  const { text, open, onClickClose } = props;
   console.log("ChildAreaのレンダリング");
-  return <>{open ? <p style={style}>{text}</p> : null}</>;
+  return (
+    <div style={style}>
+      {open ? <p>{text}</p> : null}
+      <button type="button" onClick={onClickClose}>
+        閉じる
+      </button>
+    </div>
+  );
 });
