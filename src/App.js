@@ -1,5 +1,6 @@
 import { useState, useCallback, useMemo } from "react";
 import { ChildArea } from "./ChildArea";
+import { InlineStyle } from "./components/InlineStyle";
 import "./styles.css";
 
 export default function App() {
@@ -24,10 +25,13 @@ export default function App() {
    * 最初に読み込まれた時に計算され(1+3)、以降は計算結果(4)の値を使い回す
    *
    */
-  const temp = useMemo(() => 1 + 3, []);
+  // const temp = useMemo(() => 1 + 3, []);
 
   return (
     <div className="App">
+      <InlineStyle />
+      <br />
+      <br />
       <input value={text} onChange={onChangeText} />
       <br />
       <br />
